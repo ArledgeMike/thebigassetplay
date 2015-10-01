@@ -1,5 +1,5 @@
 <h1>The Big Asset Play</h1>
-<img src="https://raw.github.com/ArledgeMike/Wordy-Bastards/master/images/wordybastards.png" />
+<img src="https://raw.githubusercontent.com/ArledgeMike/thebigassetplay/master/images/fb_header.jpg" />
 
 <h2>HTML5/CSS3 Interactive Ideation Device</h2>
 
