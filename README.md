@@ -6,7 +6,7 @@
 <p>Version 1.0 - Houston</p>
 
 <p>All the source files for The Big Asset Play.</p>
-<h4><a href="http://codeandpen.com/thebigassetpla">SEE THE DEMO</a></h4>
+<h4><a href="http://codeandpen.com/thebigassetplay">SEE THE DEMO</a></h4>
 <p>It is down to the wire and your deliverables are looking sorry. It is time for the Big Asset Play! Do you have the what it takes to ideate at the highest levels and keep your Creative Director dripping in likes they do not deserve.</p>
 
 <h3>Credit Due To:</h3>
