@@ -11,7 +11,7 @@
 
 <h3>Credit Due To:</h3>
 <ul>
-<li><a href="">Saskrotch</a></li>
+<li><a href="https://soundcloud.com/saskrotch">Saskrotch - Thank you if you are out there.</a></li>
 </li><a href="http://www.bobdotbiz.com">Bobdotcom.biz</a></li>
 <li><a href="http://benconley.com">Ben Conley - images assets</a></li>
 <li><a href="http://www.storyclubmagazine.com/stories/be-conscientious-when-using-superlatives-scott-stealey">Scott Stealey - copy assets</a></li>
