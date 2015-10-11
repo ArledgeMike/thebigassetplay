@@ -19,4 +19,4 @@
 
 
 <h3>Updates</h3>
-<p>Tamzometer has been added. Now you can track your ideation projection and tell when you when your Creative Director's deadline is creeping up so you can extend your ideation time.</p>
+<p>Tamzometer has been added. Now you can track your ideation projection and tell when your Creative Director's deadline is creeping up so you can extend your ideation time.</p>
