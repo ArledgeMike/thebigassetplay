@@ -5,48 +5,76 @@ var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
 var sourcemaps = require('gulp-sourcemaps');
 var minify_css = require('gulp-minify-css');
+var minify_html = require('gulp-minify-html');
+
 var del = require('del');
 
 var paths = {
   scripts: 'js/*',
   images: 'images/*',
-  css: 'css/*'
+  css: 'css/*',
+  sounds:'sound/*',
+  fonts:'fonts/*'
 };
 
-// Not all tasks need to use streams
-// A gulpfile is just another node program and you can use any package available on npm
 gulp.task('clean', function() {
-  // You can use multiple globbing patterns as you would with `gulp.src`
+
   return del(['build']);
+
 });
 
 gulp.task('scripts', ['clean'], function() {
 
   return gulp.src(paths.scripts)
     .pipe(sourcemaps.init())
-      .pipe(uglify())
-    .pipe(sourcemaps.write())
+    .pipe(uglify())
+    .pipe(concat('all.min.js'))
     .pipe(gulp.dest('build/js'));
+
 });
 
-// Copy all static images
 gulp.task('images', ['clean'], function() {
+  
   return gulp.src(paths.images)
-    // Pass in options to the task
     .pipe(imagemin({optimizationLevel: 15}))
-    .pipe(gulp.dest('build/img'));
+    .pipe(gulp.dest('build/images'));
+
 });
+
+gulp.task('html', ['clean'], function(){
+	
+	return gulp.src("index.html")
+	  .pipe(minify_html())
+	  .pipe(gulp.dest('build'));
+	
+	
+});
+
+gulp.task('sounds', ['clean'], function(){
+	
+	return gulp.src(paths.sounds)
+	  .pipe(gulp.dest('build/sound'));
+	
+});
+
+gulp.task('fonts', ['clean'], function(){
+	
+	return gulp.src(paths.fonts)
+	  .pipe(gulp.dest('build/fonts'));
+	
+});
+
 
 gulp.task('css', ['clean'], function(){
 	
 	return gulp.src(paths.css)
-	.pipe(minify_css())
-	.pipe(gulp.dest('build/css'));
+	  .pipe(minify_css())
+    .pipe(concat('all.min.css'))
+	  .pipe(gulp.dest('build/css'));
 	
 	
 });
 
 
 
-// The default task (called when you run `gulp` from cli)
-gulp.task('default', [ 'scripts', 'images', 'css']);
+gulp.task('default', [ 'scripts', 'images', 'css', 'html', 'fonts', 'sounds']);

@@ -2,7 +2,7 @@ function Start_Timer(sound, complete_function ){
   this.count_down_timer;
   this.sound_effect = sound;
   this.countdown_container = $('<div id="countdown" />');
-  this.countdown_text = $('<h1 />')
+  this.countdown_text = $('<h1 />');
   this.el = "#countdown";
   this.count_down_length = 3;
   this.complete_function = complete_function;

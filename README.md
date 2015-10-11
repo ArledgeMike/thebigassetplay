@@ -1,9 +1,9 @@
 <h1>The Big Asset Play</h1>
 <img src="https://raw.githubusercontent.com/ArledgeMike/thebigassetplay/master/images/fb_header.jpg" />
 
-<h2>HTML5/CSS3 Interactive Ideation Device</h2>
+<h2>HTML5/CSS3/JS Interactive Ideation Device</h2>
 
-<p>Version 1.0 - Houston</p>
+<p>Version 1.1 - Houston</p>
 
 <p>All the source files for The Big Asset Play.</p>
 <h4><a href="http://codeandpen.com/thebigassetplay">SEE THE DEMO</a></h4>
@@ -16,3 +16,7 @@
 <li><a href="http://www.storyclubmagazine.com/stories/be-conscientious-when-using-superlatives-scott-stealey">Scott Stealey - copy assets</a></li>
 <li><a href="http://www.bobdotbiz.com">Bobdotcom.biz</a></li>
 </ul>
+
+
+<h3>Updates</h3>
+<p>Tamzometer has been added. Now you can track your ideation projection and tell when you when your Creative Director's deadline is creeping up so you can extend your ideation time.</p>

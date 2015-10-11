@@ -30,7 +30,7 @@ Tamzometer.prototype = {
 
   
      this.$el.find('#meter').css({
-      "stroke-dashoffset": this.circumference ,
+      "stroke-dashoffset": this.circumference,
       "stroke-dasharray" : this.circumference 
     });
     
@@ -42,10 +42,7 @@ Tamzometer.prototype = {
 
     this.current_clicks++; 
     var new_offset = this.current_dashoffset - this.increment;
-    
-    
-    
-
+    var t = this;
     
     this.$el.find('#meter').css({
       "stroke-dashoffset":new_offset
@@ -53,10 +50,6 @@ Tamzometer.prototype = {
     
     this.current_dashoffset = new_offset;
     
-
-    
-    var t = this;
-
     $('#meter').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
   
       if(t.current_clicks >= t.total_clicks){
