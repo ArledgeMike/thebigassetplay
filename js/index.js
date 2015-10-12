@@ -155,7 +155,7 @@ Asset_Play_Game.prototype = {
       t.effects_engine.play_effect("game_music");
         
       //THIS NEEDS TO CHANGE IT IS TOO SPECIFIC ADD TO MENUS SOME GET OR SET THING
-      $("#start_screen").find("marquee").slideUp(function(){
+      $("#start_screen").find(".marquee").slideUp(function(){
         $("#start_screen").find("button").slideDown();
       });
       $("#start_screen .body").slideDown(1200);

@@ -1,11 +1,15 @@
 
-function Asset_Tile(container, color, width, height){
+function Asset_Tile(container, color, width, height,row,column){
   this.container = container;
   this.color = color;
   this.width = width;
   this.height = height;
   this.game_started = false;
   this.flipped = false;
+  this.board_position ={
+    row:row,
+    column:column
+  }
 
   this.$el_template =$('<div class="playing_card"><figure class="front"></figure></div>');
   this.init();
@@ -47,7 +51,7 @@ Asset_Tile.prototype = {
         t.$el_template.addClass("flipped");
  
 
-      $(window).trigger("card_flipped");
+      $(window).trigger("card_flipped",[t] );
 
     } 
   }
