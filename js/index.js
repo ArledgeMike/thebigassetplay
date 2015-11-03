@@ -8,7 +8,7 @@ function Asset_Play_Game() {
           loop:true
     },{ 
       name:"flip",
-      url:"./sound/flip.wav",
+      url:"./sound/flip.mp3",
       autoplay:false,
       loop:false
     },{

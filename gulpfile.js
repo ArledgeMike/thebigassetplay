@@ -6,6 +6,8 @@ var imagemin = require('gulp-imagemin');
 var sourcemaps = require('gulp-sourcemaps');
 var minify_css = require('gulp-minify-css');
 var minify_html = require('gulp-minify-html');
+var order = require("gulp-order");
+
 
 var del = require('del');
 
@@ -28,6 +30,20 @@ gulp.task('scripts', ['clean'], function() {
   return gulp.src(paths.scripts)
     .pipe(sourcemaps.init())
     .pipe(uglify())
+    .pipe(order([
+    "jquery-2.1.4.min.js",
+    "fastclick.js",
+      "effects_engine.js",
+ 
+    "asset_board.js",
+    "asset_tile.js",
+    "game_menus.js",
+    "game_timer.js",
+    "start_timer.js",
+    "assets_counter.js",
+    "power_meter.js",
+       "index.js"
+  ]))
     .pipe(concat('all.min.js'))
     .pipe(gulp.dest('build/js'));
 
