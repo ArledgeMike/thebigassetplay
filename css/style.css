@@ -21,7 +21,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   color:#292929;
-  background-position:;
+  background-position:50% 50%;
 }
 h1{
   font-size:36px;
@@ -36,7 +36,6 @@ p{
   line-height: 24px;
   margin-bottom: 15px;
 }
-
 button{
   font-size: 17px;
   border-radius:0px;
@@ -59,8 +58,6 @@ button:active{
   width: 100%;
   height: 100%;
 }
-
-
 .playing_card {
   cursor: pointer;
   width: 10%;
@@ -76,9 +73,6 @@ button:active{
   border-radius: 25px;
   box-sizing: border-box;
 }
-
-
-
 .playing_card figure {
   display: block;
   width: 100%;
@@ -93,7 +87,6 @@ button:active{
   -webkit-animation:flip 0.5s linear forwards;
   -moz-animation:flip 0.5s linear forwards;
 }
-
 
 @-webkit-keyframes flip {
   0%{
@@ -136,7 +129,19 @@ button:active{
     -moz-transform: rotateY(180deg)
   }
 }
-
+#power_meter{
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+}
+#meter{
+    fill: transparent;
+    stroke: yellow;
+    stroke-width:10;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+}
 .counter{
   width:200px;
   height:200px;
@@ -160,6 +165,7 @@ button:active{
       -ms-transform:translate(-50%,-50%);
           transform:translate(-50%,-50%)
 }
+
 #game_timer_container{
   position:fixed;
   top:0px;
@@ -176,24 +182,8 @@ button:active{
   background-color:steelblue;
 }
 
-.menus, #flash{
-  width:100%;
-  height:100%;
-  position:fixed;
-  top:0;
-  left:0;
-  background-color:rgba(224,224,224,0.5);
-  z-index:9;//
-  display:none
-;
-  /* box-shadow: 3px 4px 9px rgba(0,0,0,1); */
-}
-
-#flash{
-  display:none;
-  background-color:yellow;
-}
 #countdown{
+  display:none;
   position:fixed;
   top:50%;
   left:50%;
@@ -203,6 +193,22 @@ button:active{
 }
 #countdown h1{
   font-size:200px;
+}
+
+
+.menus, #flash{
+  width:100%;
+  height:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  background-color:rgba(224,224,224,0.5);
+  z-index:9;
+}
+
+#flash{
+  display:none;
+  background-color:yellow;
 }
 
 .modal{
@@ -222,7 +228,6 @@ button:active{
   -moz-transition: top 2s;
     
 }
-
 .modal .header{
   background-color:rgba(255,164,56,1);
   padding:20px;
@@ -235,23 +240,45 @@ button:active{
   background-color:rgba(35,182,227,1);
   padding:15px 20px;
 }
-#start_screen{
+
+#title_screen{
  top:50%;
+ width:960px;
  opacity:1;
+ box-shadow:none;
 }
-#start_screen .body{
-  display:none;
+#title_screen .header{
+  display:none;   
 }
-#start_screen .footer .marquee{
+#title_screen .body, #title_screen .footer{
+  background-color:transparent;
+}
+#title_screen .body img{
   width:100%;
-  background-color: buttonface;
-  padding: 30px 10px;
-  font-size: 17px;
-  box-sizing: border-box;
 }
-#start_screen .footer button{
-  display:none;
+#title_screen .footer{
+  position:relative;
 }
+#title_screen button, #title_screen .footer .marquee{
+  width:100%;
+  text-align:center;
+  position:relative;
+  left:50%;
+  transform:translateX(-50%);
+  background-color:transparent;
+  font-size:33px;
+  color:yellow;
+  opacity:0;
+  padding:0;
+    text-shadow:3px 3px 0px black; 
+}
+#title_screen .footer .marquee{
+   font-size:22px;
+   display:block;
+   opacity:1;
+   
+ }
+
 #level_complete.modal .body{
   display:none;
 }
@@ -265,19 +292,6 @@ button:active{
 
 }
 
-#power_meter{
-    width: 100%;
-    height: 100%;
-    fill: transparent;
-}
-#meter{
-    fill: transparent;
-    stroke: yellow;
-    stroke-width:10;
-    transition: all .3s linear;
-    -webkit-transition: all .3s linear;
-    -moz-transition: all .3s linear;
-}
 
 @media (max-width: 660px){
   body{

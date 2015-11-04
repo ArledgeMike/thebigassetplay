@@ -33,8 +33,7 @@ gulp.task('scripts', ['clean'], function() {
     .pipe(order([
     "jquery-2.1.4.min.js",
     "fastclick.js",
-      "effects_engine.js",
- 
+    "effects_engine.js",
     "asset_board.js",
     "asset_tile.js",
     "game_menus.js",

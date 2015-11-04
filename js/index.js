@@ -124,12 +124,7 @@ function Asset_Play_Game() {
   
   this.game_menu = new Game_Menu();
   this.assets_board = new Assets_Board("#subway_car");
-  
-  
- // this.assets_counter =new Assets_Counter();
   this.game_timer = new Game_Timer(this.effects_engine, this.level_options);
-  //this.power_meter = new Power_Meter("#power_meter");
-  
   this.number_of_cards_flipped =0;
   this.game_timer.assets_counter.set_total(this.level_options.number_of_tiles);
   
@@ -150,16 +145,27 @@ Asset_Play_Game.prototype = {
       
       
     $(window).on("all_sounds_loaded", function(){
+      
       t.effects_engine.stop_effect("loading");
+      
       t.effects_engine.play_effect("level_complete");
-      t.effects_engine.play_effect("game_music");
+      
+      //t.effects_engine.play_effect("game_music");
+         $("#title_screen").find(".marquee").animate({
+           opacity:0
+         },function(){
+           $("#title_screen").find("button").animate({
+             opacity:1
+           });
+         });
         
+        /*
       //THIS NEEDS TO CHANGE IT IS TOO SPECIFIC ADD TO MENUS SOME GET OR SET THING
       $("#start_screen").find(".marquee").slideUp(function(){
         $("#start_screen").find("button").slideDown();
       });
       $("#start_screen .body").slideDown(1200);
-      
+      */
     
       
     });
@@ -181,7 +187,17 @@ Asset_Play_Game.prototype = {
      
       t.effects_engine.play_effect("level_complete");
     });
+  
+  
     
+    $('#title').on("click", function(){      
+      t.effects_engine.play_effect("menu_select");
+      t.effects_engine.play_effect("game_music");
+      t.game_menu.menu_out("#title_screen", function(){
+        t.game_menu.menu_in("#start_screen");
+        
+      });
+    });  
     
     $('#start_game').on("click", function(){      
       t.effects_engine.play_effect("menu_select");
