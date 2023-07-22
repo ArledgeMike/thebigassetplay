@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "gulp": "^4.0.2"
+  },
+  "name": "thebigassetplay",
+  "description": "<h1>The Big Asset Play</h1> <img src=\"https://raw.githubusercontent.com/ArledgeMike/thebigassetplay/master/images/fb_header.jpg\" />",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arledgemike/thebigassetplay.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arledgemike/thebigassetplay/issues"
+  },
+  "homepage": "https://github.com/arledgemike/thebigassetplay#readme"
+}
